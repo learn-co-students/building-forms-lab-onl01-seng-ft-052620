@@ -1,6 +1,5 @@
 // Add BandInput component
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { addBand } from '../containers/BandsContainer'
 class BandInput extends Component {
   state = {
@@ -15,7 +14,7 @@ class BandInput extends Component {
 
   handleOnSubmit = (e) =>{
     e.preventDefault();
-    this.props.addBand(this.state.name);
+    this.props.addBand(this.state);
   }
   render() {
     return(
@@ -30,9 +29,5 @@ class BandInput extends Component {
     )
   }
 }
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addBand: band => dispatch(addBand(band))
-  }
-}
-export default connect(null, mapDispatchToProps)(BandInput);
+
+export default BandInput
