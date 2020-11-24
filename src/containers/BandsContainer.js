@@ -13,33 +13,14 @@ class BandsContainer extends Component {
         BandsContainer
         
         <BandInput addBand={this.props.addBand}/><br />
-        <ul>
+        {/* <ul> */}
           {/* {this.props.bands.map((band) => <li>Band Name: {band}</li>)} */}
           {bandList}
-        </ul>
+        {/* </ul> */}
       </div>
     )
   }
 }
-// const increment = () => ({ type: 'INCREMENT' })
-// const decrement = () => ({ type: 'DECREMENT' })
-// const reset = () => ({ type: 'RESET' })
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     // dispatching actions returned by action creators
-//     increment: () => dispatch(increment()),
-//     decrement: () => dispatch(decrement()),
-//     reset: () => dispatch(reset())
-//   }
-// }
-// const addBand = (band) => {
-//   return {
-//     type: "ADD_BAND",
-//     band
-//   }
-// }
-
 
 const mapDispatchToProps = (dispatch) => {
   // debugger;
