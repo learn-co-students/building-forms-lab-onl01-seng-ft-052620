@@ -1,6 +1,6 @@
 // Add BandInput component
 import React, { Component } from 'react'
-import { addBand } from '../containers/BandsContainer'
+// import {connect} from 'react-redux'
 class BandInput extends Component {
   state = {
     name: ""
@@ -15,14 +15,15 @@ class BandInput extends Component {
   handleOnSubmit = (e) =>{
     e.preventDefault();
     this.props.addBand(this.state);
+
   }
   render() {
     return(
       <div>
         Band Input
         <form onSubmit={this.handleOnSubmit}>
-          <input onChange={this.handleOnChange} type="text" name="name" value={this.state}/>  
-          <input type="submit" value="Submit" />
+          <input onChange={this.handleOnChange} type="text" name="name" value={this.state.name}/>  
+          <input type="submit" value="submit" />
         </form>
 
       </div>
